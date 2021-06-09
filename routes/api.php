@@ -1,5 +1,6 @@
 <?php
 
+use App\Bookable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -17,3 +18,19 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('bookables', 'Api\BookableController@index');
+Route::get('bookables/availability/{bookable}', 'Api\BookableAvailabilityController')->name('bookable.availability.show');
+Route::get('bookables/reviews/{bookable}', 'Api\BookableReviewController')->name('bookable.reviews.index');
+
+Route::apiResource('bookables', 'Api\BookableController')->only(['index', 'show']);
+
+// Route::get('bookables', function(Request $request){
+//     return Bookable::all();
+// });
+
+// Route::get('bookables/{id}', function(Request $request, $bookable_id){
+//     return Bookable::findOrFail($bookable_id);
+// });
+
+

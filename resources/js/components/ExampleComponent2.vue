@@ -3,18 +3,12 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
+                    <div class="card-header">Example Component 2</div>
 
                     <div class="card-body">
-                        I'm an example component.
+                        I'm the example component 2.
                     </div>
                 </div>
-<!-- 
-                <div class="card">
-                    <example-component2></example-component2>
-                </div> -->
-
-                
             </div>
         </div>
     </div>
@@ -23,7 +17,7 @@
 <script>
     export default {
         mounted() {
-            console.log('Component mounted.')
+            console.log('Component 2 mounted.')
         }
     }
 </script>
