@@ -2,6 +2,7 @@ import VueRouter from "vue-router";
 import ExampleComponent from "./components/ExampleComponent";
 import ExampleComponent2 from "./components/ExampleComponent2";
 import Bookable from "./bookable/Bookable";
+import Review from './review/Review'
 import Book from "./book/Book";
 
 const routes = [
@@ -20,6 +21,11 @@ const routes = [
         path: "/book/:id",
         component: Book,
         name: "book",
+    },
+    {
+        path: "/review/:id",
+        component: Review,
+        name: "review",
     }
 ];
 
